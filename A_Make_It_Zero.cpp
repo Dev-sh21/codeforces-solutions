@@ -10,16 +10,16 @@ int main()
         long long n;
         cin >> n;
         long long a[n];
-        for (int i = 0; i < n; i++) // n
+        for (int i = 0; i < n;i++)
             cin >> a[i];
-        // inputs
-        if (n % 2 == 0) // even
+      
+        if (n % 2 == 0) 
         {
             cout << 2 << endl;
             cout << 1 << " " << n << endl;
             cout << 1 << " " << n << endl;
         }
-        else // odd
+        else
         {
             cout << 4 << endl;
             cout << 1 << " " << n - 1 << endl;
