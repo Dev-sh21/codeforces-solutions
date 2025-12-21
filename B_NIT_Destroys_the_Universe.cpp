@@ -18,8 +18,8 @@ int main(){
     }
     bool zero_found=false;
     int left=0, right=n-1;
-    while(left==0) left++;
-    while(right==0) right--;
+    while(arr[left]==0) left++;
+    while(arr[right]==0) right--;
 
     for(int i=left;i<right;i++){
       if(arr[i]==0) zero_found=true;
