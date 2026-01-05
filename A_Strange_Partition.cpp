@@ -10,19 +10,23 @@ int main()
     {
         long long n, x;
         cin >> n >> x;
+
         vector<long long> a(n);
-        long long min = 0, max = 0;
-        for (int i = 0; i < n; i++) 
+        for (int i = 0; i < n; i++)
             cin >> a[i];
-        
-        for (int i = 0; i < n; i++) 
+
+        long long min_groups = 0;
+        long long max_groups = 0;
+
+        for (int i = 0; i < n; i++)
         {
-            max += ceil(a[i] * 1.0 / x);
-            min += a[i];
+            max_groups += (a[i] + x - 1) / x;
+            min_groups += a[i];
         }
 
-        min = ceil(min * 1.0 / x);
-        cout << min << " " << max << endl;
+        min_groups = (min_groups + x - 1) / x;
+
+        cout << min_groups << " " << max_groups << endl;
     }
     return 0;
 }
