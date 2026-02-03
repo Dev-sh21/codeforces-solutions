@@ -1,24 +1,33 @@
-#include<iostream>
+#include <iostream>
+#include <string>
+#include <algorithm> 
+
 using namespace std;
-int main(){
-  string str;
-  cin>>str;
-  string rev=str;
-  reverse(rev.begin(),rev.end());
-  if(rev==str) {
-    cout<<str<<endl;
-    cout<<"YES\n";}
-  else {
-    bool first_zero=false;
-    for(int i=0;i<rev.length();i++){
-      if(rev[i]!='0' && '\n' ) {
-        cout<<rev[i];  
-        first_zero=true;    
-      }   
 
+int main() {
+    string str;
+    cin >> str;
+
+    string rev = str;
+    reverse(rev.begin(), rev.end());
+    size_t first=rev.find_first_not_of('0');
+    
+    string reversed_no_zeros;
+    if (string::npos == first) {
+        reversed_no_zeros = "0"; 
+    } else {
+        reversed_no_zeros = rev.substr(first);
     }
-    if(!first_zero) cout<<'0';
-    cout<<endl;
-    cout<<"NO\n";};
 
+  
+    cout << reversed_no_zeros << endl;
+
+   
+    if (str == rev) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+
+    return 0;
 }
