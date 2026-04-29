@@ -10,7 +10,7 @@ void solve(){
   while(left<right){
     cout<<left<<" "<< right<<endl;
     left+=3;
-    right-=3;
+    right=right-3;
   }
 
 
