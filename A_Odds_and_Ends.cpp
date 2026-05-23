@@ -11,9 +11,6 @@ void solve() {
         cin >> a[i];
     }
 
-    // Condition 1: Total length odd honi chahiye
-    // Condition 2: Pehla element odd hona chahiye
-    // Condition 3: Aakhri element odd hona chahiye
     if (n % 2 != 0 && a[0] % 2 != 0 && a[n - 1] % 2 != 0) {
         cout << "Yes\n";
     } else {
