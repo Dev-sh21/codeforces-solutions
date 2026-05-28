@@ -5,7 +5,7 @@ int main(){
   cin>>n>>k;
   if(k==1) cout<<n<<endl;
   else{
-    int res=1;
+    long long  res=1;
     while(res<=n){
       res<<=1;
 
